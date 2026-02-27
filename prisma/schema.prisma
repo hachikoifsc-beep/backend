@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model second_cache {
+  cache_id   Int      @id @default(autoincrement())
+  key_str    String   @unique @db.VarChar(32)
+  value_expr String?
+  ttl_ms     BigInt?
+  created_at DateTime @default(dbgenerated("(now() AT TIME ZONE 'UTC'::text)")) @db.Timestamptz(6)
+}
+
+enum Type {
+  ADOTANTE
+  LAR_TEMP
+  ONG
+  VOLUNTARIO
+}
+
+model Pessoa {
+  id  @db.VarChar(100) @id
+  tipo Type 
+  created_at DateTime @default(dbgenerated("(now() AT TIME ZONE 'UTC'::text)")) @db.Timestamptz(6)
+}

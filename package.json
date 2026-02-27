@@ -1,0 +1,36 @@
+{
+  "name": "hackiko-dev",
+  "version": "0.0.1",
+  "private": true,
+  "license": "CC0-1.0",
+  "main": "dist/main/main.js",
+  "scripts": {
+    "run:main": "tsc && node ./dist/main/main.js",
+    "run:test": "tsc && node ./dist/test/test.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^1.0.1",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.2",
+    "@types/pg": "^8.16.0",
+    "dotenv": "^17.3.1",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
+    "prisma": "^7.4.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.0"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.4.1",
+    "@prisma/client": "^7.4.1",
+    "@rapid-d-kit/disposable": "^0.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "pg": "^8.18.0",
+    "uidlib": "^0.0.1"
+  }
+}
